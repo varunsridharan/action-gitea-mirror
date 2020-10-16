@@ -2,19 +2,18 @@
 
 set -eu
 
-
-gh_username="$INPUT_gh_username"
-accesstoken="$INPUT_accesstoken"
-gitea_host="$INPUT_gitea_host"
-gitea_username="$INPUT_gitea_username"
-gitea_accesstoken="$INPUT_gitea_accesstoken"
-gitea_gist_prefix="$INPUT_gitea_gist_prefix"
-gitea_gist_surfix="$INPUT_gitea_gist_surfix"
-gistsSource="$INPUT_gistsSource"
-gistsStared="$INPUT_gistsStared"
-repositoryStared="$INPUT_repositoryStared"
-repositorySource="$INPUT_repositorySource"
-repositoryForked="$INPUT_repositoryForked"
+gh_username="$INPUT_GH_USERNAME"
+accesstoken="$INPUT_ACCESSTOKEN"
+gitea_host="$INPUT_GITEA_HOST"
+gitea_username="$INPUT_GITEA_USERNAME"
+gitea_accesstoken="$INPUT_GITEA_ACCESSTOKEN"
+gitea_gist_prefix="$INPUT_GITEA_GIST_PREFIX"
+gitea_gist_surfix="$INPUT_GITEA_GIST_SURFIX"
+gistsSource="$INPUT_GISTSSOURCE"
+gistsStared="$INPUT_GISTSSTARED"
+repositoryStared="$INPUT_REPOSITORYSTARED"
+repositorySource="$INPUT_REPOSITORYSOURCE"
+repositoryForked="$INPUT_REPOSITORYFORKED"
 
 echo "gh_username => $gh_username \n\r"
 
