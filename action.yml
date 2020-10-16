@@ -1,0 +1,53 @@
+name: 'Github To Gitea Mirror'
+
+description: 'Python Script To Auto Trigger Gitea Mirror Using Github Action '
+
+author: 'varunsridharan'
+
+branding:
+  icon: 'airplay'
+  color: 'blue'
+
+inputs:
+  gh_username:
+    description: 'Github Username'
+
+  accesstoken:
+    description: 'Github Personal Access Token'
+
+  gitea_host:
+    description: 'Gitea Mirror Host URL'
+
+  gitea_username:
+    description: 'Gitea Username'
+
+  gitea_accesstoken:
+    description: 'Gitea Personal Access Token'
+
+  gitea_gist_prefix:
+    description: 'Custom Prefix For Repository When Mirroring Gists'
+
+  gitea_gist_surfix:
+    description: 'Custom Prefix For Repository When Mirroring Gists'
+
+  gistsSource:
+    description: 'set to true to mirror all Gists Created By You'
+
+  gistsStared:
+    description: 'set to true to mirror all Gists Stared By You'
+
+  repositoryStared:
+    description: 'set to true to mirror all Repository Stared By You'
+
+  repositorySource:
+    description: 'set to true to mirror all Repository Created By You'
+
+  repositoryForked:
+    description: 'set to true to mirror all Repository Forked By You'
+
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.domain }}
