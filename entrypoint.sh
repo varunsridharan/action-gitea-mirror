@@ -16,7 +16,6 @@ repositoryStared="$INPUT_repositoryStared"
 repositorySource="$INPUT_repositorySource"
 repositoryForked="$INPUT_repositoryForked"
 
-
 echo "gh_username => $gh_username \n\r"
 
 echo "accesstoken => $accesstoken \n\r"

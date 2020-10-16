@@ -50,4 +50,15 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.domain }}
+    - ${{ inputs.gh_username }}
+    - ${{ inputs.accesstoken }}
+    - ${{ inputs.gitea_host }}
+    - ${{ inputs.gitea_username }}
+    - ${{ inputs.gitea_accesstoken }}
+    - ${{ inputs.gitea_gist_prefix }}
+    - ${{ inputs.gitea_gist_surfix }}
+    - ${{ inputs.gistsSource }}
+    - ${{ inputs.gistsStared }}
+    - ${{ inputs.repositoryStared }}
+    - ${{ inputs.repositorySource }}
+    - ${{ inputs.repositoryForked }}
