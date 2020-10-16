@@ -15,8 +15,9 @@ repositoryStared="$INPUT_REPOSITORYSTARED"
 repositorySource="$INPUT_REPOSITORYSOURCE"
 repositoryForked="$INPUT_REPOSITORYFORKED"
 
-echo " 	⚙️ Setting Up Gitea Mirror Script"
+echo "###[group] ➤ Setting Up Gitea Mirror Script"
 git clone https://github.com/varunsridharan/github-gitea-mirror ./mirror-handler
+echo "###[endgroup]"
 
 echo "🗳️  Updating Settings"
 template='{"github":{"username":"%s","accesstoken":"%s"},"gitea":{"host":"%s","accesstoken":"%s","username":"%s","default_userpassword":"%s","gist":{"prefix":"%s","surfix":"%s"}},"repomap":{},"gistsSource":%s,"gistsStared":%s,"repositoryStared":%s,"repositorySource":%s,"repositoryForked":%s}'
