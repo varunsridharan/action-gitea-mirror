@@ -26,6 +26,6 @@ echo "$json_string" > ./mirror-handler/src/config.json
 #cat ./mirror-handler/src/config.json
 echo "###[endgroup]"
 
-echo "###[group] Setting Up Mirror For {Source Gists}"
-python3 ./mirror-handler/gist.py
-echo "###[endgroup]"
+if [ "$gistsSource" == "true" ]; then
+  python3 ./mirror-handler/gist.py
+if
