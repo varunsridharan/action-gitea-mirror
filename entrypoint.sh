@@ -15,26 +15,9 @@ repositoryStared="$INPUT_REPOSITORYSTARED"
 repositorySource="$INPUT_REPOSITORYSOURCE"
 repositoryForked="$INPUT_REPOSITORYFORKED"
 
-echo "gh_username => $gh_username \n\r"
-
-echo "accesstoken => $accesstoken \n\r"
-
-echo "gitea_host => $gitea_host \n\r"
-
-echo "gitea_username => $gitea_username \n\r"
-
-echo "gitea_accesstoken => $gitea_accesstoken \n\r"
-
-echo "gitea_gist_prefix => $gitea_gist_prefix \n\r"
-
-echo "gitea_gist_surfix => $gitea_gist_surfix \n\r"
-
-echo "gistsSource => $gistsSource \n\r"
-
-echo "gistsStared => $gistsStared \n\r"
-
-echo "repositoryStared => $repositoryStared \n\r"
-
-echo "repositorySource => $repositorySource \n\r"
-
-echo "repositoryForked => $repositoryForked \n\r"
+echo "###[group] Setting Up Config"
+template='{"github":{"username":"%s","accesstoken":"%s"},"gitea":{"host":"%s","accesstoken":"%s","username":"%s","default_userpassword":"RY7VpBD62P7964c9$mSz%2GAM82hv68yUbHc4@Gdw8c%f^W3*qdzo$f*8a6b^rKy","gist":{"prefix":"%s","surfix":"%s"}},"repomap":{},"gistsSource":%s,"gistsStared":%s,"repositoryStared":%s,"repositorySource":%s,"repositoryForked":%s}'
+json_string=$(printf "$template" "$gh_username" "$accesstoken" "$gitea_host" "$gitea_accesstoken" "$gitea_username" "$gitea_gist_prefix" "$gitea_gist_surfix" "$gistsSource" "$gistsStared" "$repositoryStared" "$repositorySource" "$repositoryForked")
+echo "$json_string" >> config.json
+cat config.json
+echo "###[endgroup]"
