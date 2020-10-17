@@ -12,7 +12,7 @@ inputs:
   gh_username:
     description: 'Github Username'
 
-  accesstoken:
+  gh_accesstoken:
     description: 'Github Personal Access Token'
 
   gitea_host:
@@ -51,7 +51,7 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.gh_username }}
-    - ${{ inputs.accesstoken }}
+    - ${{ inputs.gh_accesstoken }}
     - ${{ inputs.gitea_host }}
     - ${{ inputs.gitea_username }}
     - ${{ inputs.gitea_accesstoken }}
