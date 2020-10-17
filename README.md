@@ -2,7 +2,7 @@
 
 # Gitea Mirror - **Github Action** 
 
-> ℹ︎  This Action uses [Github > Gitea Mirror Script](ggms). And The Arguments supported by that script is supported here to
+> ℹ︎  This Action uses [Github > Gitea Mirror Script][ggms]. And The Arguments supported by that script is supported here to
 
 ## Requirements
 * Self / Cloud Hosted [Gitea](gitea) Instance
@@ -16,10 +16,10 @@
 
 
 ## Why Github Action ? Can't This Script Run Inside Selfhosted Instance ?
-Yes this script [Github > Gitea Mirror](ggms) Can be ran inside the selfhosted instance. but i created this action for few reasons
+Yes this script [Github > Gitea Mirror][ggms] Can be ran inside the selfhosted instance. but i created this action for few reasons
 
 * This action can be used for ppl how are not tech savvy
-* Personally i wanted to remove resource used by [Github > Gitea Mirror](ggms) Script 
+* Personally i wanted to remove resource used by [Github > Gitea Mirror][ggms] Script 
 * I think that there are some advantages when calling GithubAPI Inside an Github Action
 
 
