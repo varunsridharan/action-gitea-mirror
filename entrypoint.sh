@@ -69,6 +69,8 @@ if [ "$repositoryStared" == "true" ]; then
   echo "###[endgroup]"
 fi
 
+rm -rf ./mirror-handler/
+
 if [ "$localCache" == "true" ]; then
   if [ "$(git status --porcelain)" != "" ]; then
     git add gitea.json -f
