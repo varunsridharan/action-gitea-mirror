@@ -73,6 +73,7 @@ if [ "$localCache" == "true" ]; then
   if [ "$(git status --porcelain)" != "" ]; then
     git add gitea.json -f
     git commit -m "Updated / Created Gitea Local Repository Cache"
-    git push origin
+    #git push origin
+    git push "https://x-access-token:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY"
   fi
 fi
