@@ -33,11 +33,11 @@ else
   gitconfig
 fi
 
-if [ "$localCache" == "true" ]; then
-  echo "###[group] ⏳ Setting Up Local Cache"
-  python3 ./mirror-handler/repoCache.py
-  echo "###[endgroup]"
-fi
+#if [ "$localCache" == "true" ]; then
+#  echo "###[group] ⏳ Setting Up Local Cache"
+#  python3 ./mirror-handler/repoCache.py
+#  echo "###[endgroup]"
+#fi
 
 if [ "$gistsSource" == "true" ]; then
   echo "###[group] ⏳ Setting Up Mirror For Public & Private Gits"
