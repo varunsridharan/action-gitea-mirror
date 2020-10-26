@@ -1,8 +1,4 @@
-FROM  alpine:latest
-
-RUN apk add git
-
-#RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
+FROM  varunsridharan/actions-alpine:latest
 
 RUN apk add python3
 

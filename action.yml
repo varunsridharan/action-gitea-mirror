@@ -45,6 +45,9 @@ inputs:
   repositoryForked:
     description: 'set to true to mirror all Repository Forked By You'
 
+  localCache:
+    description: 'set to true to store all repos created in gitea'
+
 
 runs:
   using: 'docker'
@@ -62,3 +65,4 @@ runs:
     - ${{ inputs.repositoryStared }}
     - ${{ inputs.repositorySource }}
     - ${{ inputs.repositoryForked }}
+    - ${{ inputs.localCache }}
