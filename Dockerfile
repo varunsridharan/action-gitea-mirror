@@ -4,7 +4,7 @@ RUN apk add python3
 
 RUN apk add py3-pip
 
-RUN pip3 install PyGithub
+RUN pip3 install "PyGithub==1.54.1"
 
 COPY entrypoint.sh /entrypoint.sh
 
